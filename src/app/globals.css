@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #f6f8fb;
+  --surface: #ffffff;
+  --foreground: #10213a;
+  --muted: #5b6b82;
+  --border: #d9e1ec;
+  --navy: #14305a;
+  --navy-dark: #0e2344;
+  --blue: #3b78c4;
+  --blue-soft: #e6f0fb;
+  --warn-bg: #fff4e5;
+  --warn-fg: #7a3e00;
+  --warn-border: #f3c892;
+  --ok-bg: #e9f7ef;
+  --ok-fg: #1d5c3a;
+  --danger-bg: #fdecec;
+  --danger-fg: #8a1c1c;
+  --danger-border: #f1b4b4;
 }
 
 @theme inline {
   --color-background: var(--background);
+  --color-surface: var(--surface);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-navy: var(--navy);
+  --color-navy-dark: var(--navy-dark);
+  --color-blue: var(--blue);
+  --color-blue-soft: var(--blue-soft);
+  --color-warn-bg: var(--warn-bg);
+  --color-warn-fg: var(--warn-fg);
+  --color-warn-border: var(--warn-border);
+  --color-ok-bg: var(--ok-bg);
+  --color-ok-fg: var(--ok-fg);
+  --color-danger-bg: var(--danger-bg);
+  --color-danger-fg: var(--danger-fg);
+  --color-danger-border: var(--danger-border);
+  --font-sans: var(--font-sans-kr), system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  word-break: keep-all;
+}
+
+*:focus-visible {
+  outline: 3px solid var(--blue);
+  outline-offset: 2px;
+  border-radius: 6px;
 }
